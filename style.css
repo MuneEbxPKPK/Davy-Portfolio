@@ -1,0 +1,243 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #FFF4ED;
+    color: #333;
+    font-family: "Avenir Next", "Avenir", sans-serif;
+}
+
+.acme-regular {
+    font-family: "Acme", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+/* Navigation Menu Code Starts */
+
+#navigation {
+    margin: 16px 56px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+#webTitleText a {
+    font-size: 48px;
+    font-weight: bolder;
+    text-decoration: none;
+    color: #333;
+    transition: 0.5s;
+    font-family: "Acme";
+}
+
+#webTitleText a:hover {
+    color: #0400C4;
+}
+
+/* Code For Hamburger Menu Starts */
+
+#menuToggle {
+
+    z-index: 1;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+
+#menuToggle a {
+    text-decoration: none;
+    color: #232323;
+    transition: color 0.3s ease;
+}
+
+#menuToggle span:first-child {
+    transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2) {
+    transform-origin: 0% 100%;
+}
+
+#menuToggle input {
+    position: absolute;
+    cursor: pointer;
+    opacity: 0;
+    width: 40px;
+    z-index: 2;
+    /* in order to place the checkbox over the hamburguer */
+    -webkit-touch-callout: none;
+}
+
+#menuToggle span {
+    display: block;
+    /* to ensure that each span element occupies its own line. */
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    /* create some spacing between the span elements. */
+    position: relative;
+    /* allow for positioning changes in relation to the parent div.*/
+    background: #333;
+    border-radius: 3px;
+    z-index: 1;
+    /* ensure that the span element is under the checkbox */
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+        background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+    transform-origin: 4px 0px;
+    /* set to 4px 0px to specify the center of rotation for the transform property above. */
+}
+
+#menuToggle input:checked~span {
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+    background: #333;
+}
+
+#menuToggle input:checked~span:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+#menuToggle input:checked~span:nth-last-child(2) {
+    transform: rotate(-45deg) translate(0, -1px);
+}
+
+#menu {
+    position: absolute;
+    left: -300px;
+    width: 250px;
+    margin: -100px 0 0 -50px;
+    padding: 0 50px 50px 50px;
+    padding-top: 100px;
+    background: #e6e5e3;
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    transition: left 0.5s;
+
+}
+
+#menu li {
+    padding: 10px 0;
+    font-size: 22px;
+}
+
+#menuToggle input:checked~ul {
+    left: 40px;
+}
+
+#menuToggle a:hover {
+    color: #0400C4;
+}
+
+/* Code For Hamburger Menu Ends */
+
+/* Navigation Menu Code End */
+
+
+/* Code For Hero Section Starts */
+
+
+.heroSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 32px;
+    align-content: center;
+}
+
+.heroDotStyle span {
+    display: block;
+    margin: 2px;
+    height: 15px;
+    width: 15px;
+    background-color: #A1A0E5;
+    border-radius: 50%;
+}
+
+.heroDotStyle {
+    position: relative;
+    left: -100px;
+    display: flex;
+    flex-direction: row;
+}
+
+.devPic {
+    height: 468px;
+    width: 410px;
+}
+
+.heroDetails {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    justify-content: space-evenly;
+    margin: 48px 56px;
+}
+
+.heroIntro {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    align-content: center;
+    justify-content: space-evenly;
+    margin: 0px 64px;
+}
+
+.heroIntroBtns {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    justify-content: space-evenly;
+}
+
+.heroIntroBtn {
+    font-family: "Acme";
+    width: 350px;
+    font-weight: 100;
+    font-size: 12px;
+    border-radius: 8px;
+    background-color: #333;
+    color: #FFF4ED;
+    height: 48px;
+    margin: 0px 8px;
+    border: none;
+    transition: 0.5s;
+}
+
+.heroIntroBtns a :hover {
+    background-color: black;
+    cursor: pointer;
+}
+
+.heroIntroTextL1 h1{
+    font-family: "Condiment", cursive;
+    font-size: 44px;
+    font-weight: 100;
+    color: #0400C4;
+    margin: 0;
+}
+.heroIntroTextL2 h1{
+    position: relative;
+    top: -80px;
+    right: -150px;
+    font-family: "Abril Fatface", serif;
+    font-size: 128px;
+    color: #0400C4;
+    margin: 8px;
+}
+
+/* Code For Hero Section Ends */
+
+/* Code for Blogs Section Starts */
+
+
+
+/* Code for Blogs Section Ends */
